@@ -23,16 +23,16 @@ unit FIBPlatforms;
 interface
 {$I FIBPlus.inc}
 uses
+
 {$IFDEF D_XE2}
  System.UITypes,System.Types,
 {$ENDIF}
-  {$IFDEF WINDOWS}
-   Windows,Messages,SysUtils;
-  {$ENDIF}
-
-  {$IFDEF MACOS}
-   Classes,SysUtils,Macapi.CoreServices,Macapi.Mach,Macapi.Foundation,Macapi.AppKit,Macapi.CocoaTypes;
-  {$ENDIF MACOS}
+{$IFDEF WINDOWS}
+ Windows,Messages,SysUtils;
+{$ENDIF}
+{$IFDEF MACOS}
+ Classes,SysUtils,Macapi.CoreServices,Macapi.Mach,Macapi.Foundation,Macapi.AppKit,Macapi.CocoaTypes;
+{$ENDIF MACOS}
 
 
 {$IFDEF WINDOWS}
@@ -132,6 +132,7 @@ end;
     Result:=GetCurrentThreadID
    end;
  {$ENDIF}
+
  {$IFDEF MACOS}
    function FIBGetTickCount: Cardinal;
    begin
@@ -170,6 +171,7 @@ end;
 
 
 end.
+
 
 
 

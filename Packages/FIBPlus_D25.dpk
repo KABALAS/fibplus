@@ -9,24 +9,24 @@ package FIBPlus_D25;
 {$EXTENDEDSYNTAX ON}
 {$IMPORTEDDATA ON}
 {$IOCHECKS ON}
-{$LOCALSYMBOLS OFF}
+{$LOCALSYMBOLS ON}
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
-{$OPTIMIZATION ON}
+{$OPTIMIZATION OFF}
 {$OVERFLOWCHECKS OFF}
 {$RANGECHECKS OFF}
-{$REFERENCEINFO OFF}
+{$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
-{$STACKFRAMES OFF}
+{$STACKFRAMES ON}
 {$TYPEDADDRESS OFF}
 {$VARSTRINGCHECKS ON}
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
-{$DEFINE RELEASE}
+{$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'FibPlus Access Components'}
-{$IMPLICITBUILD OFF}
+{$IMPLICITBUILD ON}
 
 requires
   rtl,
@@ -79,7 +79,6 @@ contains
   pFIBLists in '..\pFIBLists.pas',
   pFIBStoredProc in '..\pFIBStoredProc.pas',
   IB_ErrorCodes in '..\IB_ErrorCodes.pas',
-  RegFIBPlus in '..\RegFIBPlus.pas',
   FIBCloneComponents in '..\FIBCloneComponents.pas',
   FIBMDTInterface in '..\FIBMDTInterface.pas',
   pFIBFieldsDescr in '..\pFIBFieldsDescr.pas',
